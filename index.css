@@ -11,14 +11,18 @@
 body {
   font-family: "Mountains of Christmas", sans-serif;
   background-color: #f0f8ff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 100vh;
   overflow: hidden;
   background-image: url("https://images.unsplash.com/photo-1461599974261-7a1559ac5267?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   background-size: cover;
   background-position: center;
+}
+
+.header {
+  display: flex;
+  font-size: 20px;
+  margin-top: 20px;
+  margin-left: 20px;
 }
 
 /* Card Styling */
@@ -28,12 +32,20 @@ body {
   border-radius: 10px;
   text-align: center;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-  position: relative;
-  z-index: 1;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 430px;
+  height: 272px;
+  margin: 0;
 }
 
 /* Greeting Title */
-.greeting {
+.card__content_greeting {
   font-size: 3rem;
   color: #e74c3c;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
@@ -41,14 +53,14 @@ body {
 }
 
 /* Holiday Message */
-.message {
+.card__content_message {
   font-size: 1.5rem;
   color: #2ecc71;
   margin-bottom: 30px;
 }
 
 /* Button Styling */
-.celebrate-button {
+.card__content_celebrate-button {
   background-color: #3498db;
   color: white;
   font-size: 1.2rem;
@@ -59,9 +71,29 @@ body {
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.celebrate-button:hover {
+.card__content_celebrate-button:hover {
   background-color: #2ecc71;
   transform: scale(1.1);
+}
+
+.footer {
+  display: flex;
+  position: absolute;
+  bottom: 5%;
+  left: 49%;
+  /* margin: 0 auto; */
+  width: 472px;
+}
+
+.footer__image {
+  display: flex;
+  width: 30px;
+  opacity: 70%;
+}
+
+.footer__image:hover {
+  opacity: 50%;
+  cursor: pointer;
 }
 
 /* Snow Effect Animation */
@@ -81,7 +113,7 @@ body::before {
   left: 0;
   right: 0;
   bottom: 0;
-  background: url("./snowflake2.png");
+  background: url("./images/snowflake2.png");
   background-size: cover;
   animation: snow 10s linear infinite;
   opacity: 0.3;

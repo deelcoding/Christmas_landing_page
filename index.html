@@ -11,19 +11,25 @@
       href="index.css" />
   </head>
   <body>
+    <header class="header">
+      <h2 class="header__name">Dacotah Deel</h2>
+    </header>
     <div class="card">
-      <div class="content">
-        <h1 class="greeting">Happy Holidays!</h1>
-        <p class="message">Wishing you a joyful and peaceful season!</p>
-        <button class="celebrate-button">Celebrate</button>
+      <div class="card__content">
+        <h1 class="card__content_greeting">Happy Holidays!</h1>
+        <p class="card__content_message">
+          Wishing you a joyful and peaceful season!
+        </p>
+        <button class="card__content_celebrate-button">Celebrate</button>
       </div>
     </div>
-
-    <script src="https://unpkg.com/magic-snowflakes/dist/snowflakes.min.js"></script>
-    <script>
-      var sf = new Snowflakes({
-        color: "#fff",
-      });
-    </script>
+    <footer class="footer">
+      <a href="http://https://github.com/deelcoding"
+        ><img
+          class="footer__image"
+          src="./images/github.png"
+          alt="GitHub"
+      /></a>
+    </footer>
   </body>
 </html>
